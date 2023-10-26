@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vincent Van Gogh</title>
+  <link rel="stylesheet" href="image-gallery.css">
+  <script src="https://kit.fontawesome.com/393db74bed.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div><a href="">Title</a></div>
+      <div><a href="image-gallery.html">Home</a></div>
+      <div><a href="">Artists</a></div>
+      <div><a href="">Gallery</a></div>
+    </div>
+    <div class="main-vincent">
+      <img src="vincent.jpg" alt="" class="profile">
+      <div class="info">
+        <div>Full Name</div>
+        <div>Vincent Willem van Gogh</div>
+        <div>Born</div>
+        <div>March 30, 1853 (Zundert, The Netherlands)</div>
+        <div>Died</div>
+        <div>July 29, 1890 (Auvers-sur-Oise, France)</div>
+        <div>Notable Artwork</div>
+        <div>The Starry Night, Sunflowers</div>
+        <div>Movement</div>
+        <div>Post-Impressionism</div>
+      </div>
+    </div>
+    <div class="biography">
+      <p><span>Vincent Willem van Gogh </span> (30 March 1853 - 29 July 1890) was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade he created approximately 2100 artworks, including around 860 oil paintings, most of them in the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold, symbolic colours, and dramatic, impulsive and highly expressive brushwork that contributed to the foundations of modern art. Only one of his paintings was known by name to have been sold during his lifetime. Van Gogh became famous after his suicide, aged 37, which followed years of poverty and mental illness.</p>
+    </div>
+    <div class="image-container">
+      <h1>Famous Paintings</h1>
+      <div class="gallery-wrap">
+        <button id="prev-button"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="gallery">
+          <div>
+            <span class="landscape"><img src="paintings/Vincent-the-starry-night-over-th.jpg" alt="">
+              <div class="art-name">
+                <h2>Starry Night over the Rhone</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Vincent-sunflowers.jpg" alt="">
+              <div class="art-name">
+                <h2>Sunflowers</h2>
+              </div>
+            </span>
+          </div>
+          <div>
+            <span><img src="paintings/Vincent_starry_night2.jpg" alt="">
+              <div class="art-name">
+                <h2>Starry Night</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Vincent-still-life-with-irises.jpg" alt="">
+              <div class="art-name">
+                <h2>Still life with Irises</h2>
+              </div>
+            </span>
+          </div>
+          <div>
+            <span><img src="paintings/Vincent-oslo-self-portrait.jpg" alt="">
+              <div class="art-name">
+                <h2>Oslo Self Portrait</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Vincent-cafe-terrace-at-night.jpg" alt="">
+              <div class="art-name">
+                <h2>Cafe Terrace at Night</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Vincent-the-night-cafe.jpg" alt="">
+              <div class="art-name">
+                <h2>The Night Cafe</h2>
+              </div>
+            </span>
+          </div>
+  
+        </div>
+
+        <button id="next-button"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+    </div>
+    <footer class="footer">
+      <h2>Contacts:</h2>
+      <p><a href="">polbryanparadero@gmail.com</a></p>
+      <p><a href="">09691306593</a></p>
+      <p class="portfolio">Visit my Portfolio website <a href="">Here.</a></p>
+      <p class="copyright">&#169; Art Gallery. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    let scrollContainer = document.querySelector(".gallery");
+    let prevBtn = document.getElementById("prev-button");
+    let nextBtn = document.getElementById("next-button");
+
+    scrollContainer.addEventListener("wheel", (evt) => {
+      scrollContainer.style.scrollBehavior = "auto";
+      evt.preventDefault();
+      scrollContainer.scrollLeft += evt.deltaY;
+    });
+    nextBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft += 300;
+    });
+    prevBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft -= 300;
+    });
+  </script>
+</body>
+</html>

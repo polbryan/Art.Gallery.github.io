@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pablo Picasso</title>
+  <link rel="stylesheet" href="image-gallery.css">
+  <script src="https://kit.fontawesome.com/393db74bed.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div><a href="">Title</a></div>
+      <div><a href="image-gallery.html">Home</a></div>
+      <div><a href="">Artists</a></div>
+      <div><a href="">Gallery</a></div>
+    </div>
+    <div class="main-pablo">
+      <img src="pablo-picasso.jpg" alt="" class="profile">
+      <div class="info">
+        <div>Full Name</div>
+        <div>Pablo Ruiz Picasso</div>
+        <div>Born</div>
+        <div>October 25, 1881 (Málaga, Spain)</div>
+        <div>Died</div>
+        <div>April 8, 1973 (Mougins, France)</div>
+        <div>Notable Artwork</div>
+        <div>Les Demoiselles d'Avignon, Guernica</div>
+        <div>Movement</div>
+        <div>Cubism</div>
+      </div>
+    </div>
+    <div class="biography">
+      <p><span>Pablo Ruiz Picasso </span> (25 October 1881 - 8 April 1973) was a Spanish painter, sculptor, printmaker, ceramicist and theatre designer who spent most of his adult life in France. One of the most influential artists of the 20th century, he is known for co-founding the Cubist movement, the invention of constructed sculpture, the co-invention of collage, and for the wide variety of styles that he helped develop and explore. Among his most famous works are the proto-Cubist Les Demoiselles d'Avignon (1907) and the anti-war painting Guernica (1937), a dramatic portrayal of the bombing of Guernica by German and Italian air forces during the Spanish Civil War.</p>
+    </div>
+    <div class="image-container">
+      <h1>Famous Paintings</h1>
+      <div class="gallery-wrap">
+        <button id="prev-button"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="gallery">
+          <div>
+            <span class="landscape"><img src="paintings/Pablo_guernica-cut.jpg" alt="">
+              <div class="art-name">
+                <h2>Guernica</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Pablo-les-demioselles-d'avignon.png" alt="">
+              <div class="art-name">
+                <h2>Les Demioselles d'Avignon</h2>
+              </div>
+            </span>
+          </div>
+          <div>
+            <span><img src="paintings/Pablo-girl-before-a-mirror.png" alt="">
+              <div class="art-name">
+                <h2>Girl Before a Mirror</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Pablo-portrait-of-gertrude-stein.png" alt="">
+              <div class="art-name">
+                <h2>Portrait of Gertrude Stein</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Pablo-self-portrait-1901.png" alt="">
+              <div class="art-name">
+                <h2>Self Portrait 1901</h2>
+              </div>
+            </span>
+          </div>
+          <div>
+            <span><img src="paintings/Pablo-la-vie.png" alt="">
+              <div class="art-name">
+                <h2>La Vie</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Pablo-the-old-guitarist.png" alt="">
+              <div class="art-name">
+                <h2>The Old Guitarist</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Pablo-the-weeping-woman.png" alt="">
+              <div class="art-name">
+                <h2>The Weeping Woman</h2>
+              </div>
+            </span>
+          </div>
+  
+        </div>
+
+        <button id="next-button"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+    </div>
+    <footer class="footer">
+      <h2>Contacts:</h2>
+      <p><a href="">polbryanparadero@gmail.com</a></p>
+      <p><a href="">09691306593</a></p>
+      <p class="portfolio">Visit my Portfolio website <a href="">Here.</a></p>
+      <p class="copyright">&#169; Art Gallery. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    let scrollContainer = document.querySelector(".gallery");
+    let prevBtn = document.getElementById("prev-button");
+    let nextBtn = document.getElementById("next-button");
+
+    scrollContainer.addEventListener("wheel", (evt) => {
+      scrollContainer.style.scrollBehavior = "auto";
+      evt.preventDefault();
+      scrollContainer.scrollLeft += evt.deltaY;
+    });
+    nextBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft += 300;
+    });
+    prevBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft -= 300;
+    });
+  </script>
+</body>
+</html>

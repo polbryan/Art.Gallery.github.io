@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: Helvetica;
+}
+.navbar{
+  height: 50px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  background: black;
+}
+.navbar div{
+  padding: 10px;
+  text-align: center;
+  border-right: 1px solid hsl(0, 0%, 84%);
+  font-size: 1.4rem;
+  transition: 300ms;
+}
+.navbar div a{
+  color: hsl(0, 0%, 84%);
+  text-decoration: none;
+}
+.navbar div:not(:first-of-type):hover{
+  background: rgb(56, 56, 56);
+}
+.main-content{
+  padding: 50px;
+  height: 90vh;
+  width: 100%;
+  animation: animate 24s linear infinite;
+  box-shadow: inset 200px 200px 250px hsla(0, 0%, 0%, 0.801), inset -200px -200px 250px hsla(0, 0%, 0%, 0.801);
+  color: hsl(0, 0%, 84%);
+  background-size: cover;
+}
+@keyframes animate{
+  0%, 100%{
+    background-image: url(paintings/Leonardo_Last_supper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  12.5%{
+    background-image: url(paintings/Vincent_starry_night2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25%{
+    background-image: url(paintings/Michelangelo_-_Creation_of_Adam.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  37.5%{
+    background-image: url(paintings/Raphael_athens.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50%{
+    background-image: url(paintings/Edvard_Munch_-_Melancholy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  62.5%{
+    background-image: url(paintings/Salvador_clock.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75%{
+    background-image: url(paintings/Pablo_guernica-cut.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  87.5%{
+    background-image: url(paintings/juan_spoliarium.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.main-content h1{
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-size: 5rem;
+  text-shadow: 2px 2px 5px black;
+}
+.main-content p{
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 5px black;
+}
+.artist-content{
+  width: 100%;
+  padding: 50px;
+  background: black;
+}
+.artist-content h1{
+  color: hsl(0, 0%, 84%);
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  border-bottom: 2px solid hsl(0, 0%, 84%);
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 2rem;
+  
+}
+.card-container{
+  height: 350px;
+  width: 250px;
+  background: hsl(0, 0%, 84%);
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  filter: brightness(60%);
+  transition: filter 100ms, transform 100ms;
+}
+.card-container:hover{
+  filter: brightness(100%);
+  transform: scale(1.1);
+}
+.artist-pic{
+  height: 310px;
+  width: 244px;
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  right: 0;
+  border-radius: 10px;
+}
+.description{
+  font-family: "Dancing Script";
+  font-style: italic;
+  width: 250px;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: hsl(0, 0%, 84%);
+  background: hsla(0, 0%, 0%, 0.614);
+  backdrop-filter: blur(10px);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.description h2{
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+.description p{
+  font-size: 0.8rem;
+}
+.footer{
+  height: 200px;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  border-top: 5px solid hsl(0, 0%, 84%);
+  color: hsl(0, 0%, 84%);
+  font-family: Helvetica;
+  text-align: center;
+}
+.footer h2{
+  margin: 10px;
+  border-bottom: 1px solid hsl(0, 0%, 84%);
+}
+.footer a{
+  color: hsl(0, 0%, 84%);
+}
+.footer .portfolio{
+  margin-top: 20px;
+}
+.footer .copyright{
+  margin-top: 30px;
+  font-size: 1.5rem;
+}
+
+
+/* -----ARTISTS PAGE----- */
+
+.main-leonardo{
+  padding: 50px 200px;
+  height: 90vh;
+  width: 100%;
+  background-image: url(paintings/Leonardo_Last_supper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+  color: hsl(0, 0%, 84%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-vincent{
+  padding: 50px 200px;
+  height: 90vh;
+  width: 100%;
+  background-image: url(paintings/Vincent_starry_night2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+  color: hsl(0, 0%, 84%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-michelangelo{
+  padding: 50px 200px;
+  height: 90vh;
+  width: 100%;
+  background-image: url(paintings/Michelangelo_-_Creation_of_Adam.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+  color: hsl(0, 0%, 84%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-raphael{
+  padding: 50px 200px;
+  height: 90vh;
+  width: 100%;
+  background-image: url(paintings/Raphael_athens.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+  color: hsl(0, 0%, 84%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-edvard{
+  padding: 50px 200px;
+  height: 90vh;
+  width: 100%;
+  background-image: url(paintings/Edvard-death-in-the-sick-room.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+  color: hsl(0, 0%, 84%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-salvador{
+  padding: 50px 200px;
+  height: 90vh;
+  width: 100%;
+  background-image: url(paintings/Salvador_clock.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+  color: hsl(0, 0%, 84%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-pablo{
+  padding: 50px 200px;
+  height: 90vh;
+  width: 100%;
+  background-image: url(paintings/Pablo_guernica-cut.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+  color: hsl(0, 0%, 84%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-juan{
+  padding: 50px 200px;
+  height: 90vh;
+  width: 100%;
+  background-image: url(paintings/juan_spoliarium.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+  color: hsl(0, 0%, 84%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile{
+  height: 320px;
+  border-radius: 5px;
+}
+.info{
+  max-height: 400px;
+  max-width: 700px;
+  border-top: 1px solid hsl(0, 0%, 84%);
+  border-right: 1px solid hsl(0, 0%, 84%);
+  border-bottom: 1px solid hsl(0, 0%, 84%);
+  background: hsla(0, 0%, 0%, 0.703);
+  display: grid;
+  grid-template-columns: 220px 1fr;
+}
+.info div{
+  padding: 20px;
+}
+.info div:nth-child(odd){
+  font-size: 1.3rem;
+}
+.info div:nth-child(even){
+  text-align: right;
+}
+.biography{
+  background: linear-gradient(hsl(53, 60%, 3%), hsl(53, 95%, 9%), hsl(53, 95%, 9%),hsl(53, 60%, 3%));
+  color: hsl(0, 0%, 84%);
+  padding: 20px 150px;
+  text-indent: 100px;
+  line-height: 2;
+  font-size: 1.3rem;
+  text-align: justify;
+}
+.biography p{
+  border-left: 5px solid hsl(0, 0%, 84%);
+  border-right: 5px solid hsl(0, 0%, 84%);
+  padding: 20px;
+}
+.biography span{
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.8rem;
+  color: hsl(0, 0%, 84%);
+}
+.biography a{
+  color: hsl(0, 0%, 84%);
+}
+.image-container{
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(hsl(53, 60%, 3%), hsl(53, 95%, 9%),hsl(53, 60%, 3%));
+  padding: 20px;
+}
+.image-container h1{
+  text-align: center;
+  color: hsl(0, 0%, 84%);
+  padding: 15px;
+  border-bottom: 2px solid hsl(0, 0%, 84%);
+  margin-bottom: 10px;
+}
+.gallery{
+  width: 900px;
+  display: flex;
+  overflow-x: scroll;
+}
+@media screen and (min-width: 801px) and (max-width: 1200px){
+  .info{
+    font-size: 15px;
+  }
+  .info div{
+    padding: 10px;
+  }
+}
+.gallery div{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  padding: 10px;
+  flex: none;
+}
+.gallery div img{
+  width: 100%;
+  height: 450px;
+  transition: transform 300ms;
+  border-radius: 5px;
+}
+.gallery div span{
+  position: relative;
+  transition: 300ms;
+}
+.art-name{
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 0%, 0.628);
+  position: absolute;
+  color: hsl(0, 0%, 84%);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 300ms;
+  backdrop-filter: blur(5px);
+}
+.art-name h2{
+  margin-left: 50px;
+  font-size: 2rem;
+  text-align: center;
+}
+.gallery::-webkit-scrollbar{
+  display: none;
+}
+.gallery-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+span .lands{
+  width: 600px;
+}
+#prev-button, #next-button{
+  width: 50px;
+  height: 50px;
+  background: rgb(127, 72, 0);
+  color: hsl(0, 0%, 84%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  margin: 15px;
+}
+#prev-button:hover,
+#next-button:hover{
+  opacity: 0.7;
+}
+.gallery div span:hover{
+  cursor: pointer;
+  margin-top: -10px;
+}
+.art-name:hover{
+  opacity: 1;
+}
+
+/* -----Gallery Tab----- */
+.img-container{
+  width: 100%;
+  background: black;
+}
+.img-container h2{
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: whitesmoke;
+}
+.img-list{
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.img-list img{
+  height: 120px;
+  margin: 5px;
+  cursor: pointer;
+}
+.img-list img:active{
+  outline: 2px solid whitesmoke;
+}
+.img-preview{
+  text-align: center;
+}
+.img-preview img {
+  max-width: 100%;
+  height: 350px;
+}
+
+@media screen and (max-width: 480px){
+  .container{
+    width: 480px;
+  }
+  .navbar div{
+    font-size: 1rem;
+  }
+  .main-content h1{
+    font-size: 3rem;
+    margin-top: 50px ;
+  }
+  .main-content p{
+    font-size: 1.3rem;
+  }
+  .grid-container{
+    justify-items: center;
+}
+  .img-preview img{
+    max-width: 300px;
+  }
+  .footer h2{
+    font-size: 1.5rem;
+  }
+  .footer .copyright{
+    margin-top: 30px;
+    font-size: 1rem;
+  }
+  .main-leonardo,
+  .main-edvard,
+  .main-juan,
+  .main-michelangelo,
+  .main-pablo,
+  .main-raphael,
+  .main-salvador,
+  .main-vincent{
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+  }
+  .profile{
+    height: 200px;
+    margin: 10px;
+  }
+  .info {
+    height: 400px;
+    width: 400px;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid whitesmoke;
+    padding: 5px;
+}
+  .info div{
+    padding: 5px;
+  }
+  .biography{
+    width: 100%;
+    padding: 20px;
+  }
+  .biography p{
+    border: none;
+    font-size: 1rem;
+  }
+  .biography span{
+    font-size: 1.5rem;
+    text-indent: 30px;
+  }
+}

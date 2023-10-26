@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raphael</title>
+  <link rel="stylesheet" href="image-gallery.css">
+  <script src="https://kit.fontawesome.com/393db74bed.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div><a href="">Title</a></div>
+      <div><a href="image-gallery.html">Home</a></div>
+      <div><a href="">Artists</a></div>
+      <div><a href="">Gallery</a></div>
+    </div>
+    <div class="main-raphael">
+      <img src="raphael.jpg" alt="" class="profile">
+      <div class="info">
+        <div>Full Name</div>
+        <div>	Raffaello Sanzio da Urbino</div>
+        <div>Born</div>
+        <div>	March 28 or April 6, 1483 (Urbino, Italy)</div>
+        <div>Died</div>
+        <div>April 6, 1520 (Rome, Italy)</div>
+        <div>Notable Artwork</div>
+        <div>The School of Athens</div>
+        <div>Movement</div>
+        <div>Italian Renaissance</div>
+      </div>
+    </div>
+    <div class="biography">
+      <p><span>Raffaello Sanzio da Urbino </span> (March 28 or April 6, 1483 - April 6, 1520), now generally known in English as Raphael, was an Italian painter and architect of the High Renaissance. His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur. Together with <a href="leonardo.html" target="_blank">Leonardo da Vinci</a> and <a href="michelangelo.html" target="_blank">Michelangelo</a>, he forms the traditional trinity of great masters of that period.</p>
+    </div>
+    <div class="image-container">
+      <h1>Famous Paintings</h1>
+      <div class="gallery-wrap">
+        <button id="prev-button"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="gallery">
+          <div>
+            <span class="landscape"><img src="paintings/Raphael_athens.jpg" alt="">
+              <div class="art-name">
+                <h2>The School of Athens</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Raphael-sistine-madonna.jpg" alt="">
+              <div class="art-name">
+                <h2>Sistine Madonna</h2>
+              </div>
+            </span>
+          </div>
+          <div>
+            <span><img src="paintings/Raphael-the-marriage-of-the-virgin.jpg" alt="">
+              <div class="art-name">
+                <h2>The Marriage of the Virgin</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Raphael-the-triumph.png" alt="">
+              <div class="art-name">
+                <h2>The Triump of Galatea</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Raphael-Transfiguration.jpg" alt="">
+              <div class="art-name">
+                <h2>Transfiguration</h2>
+              </div>
+            </span>
+          </div>
+  
+        </div>
+
+        <button id="next-button"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+    </div>
+    <footer class="footer">
+      <h2>Contacts:</h2>
+      <p><a href="">polbryanparadero@gmail.com</a></p>
+      <p><a href="">09691306593</a></p>
+      <p class="portfolio">Visit my Portfolio website <a href="">Here.</a></p>
+      <p class="copyright">&#169; Art Gallery. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    let scrollContainer = document.querySelector(".gallery");
+    let prevBtn = document.getElementById("prev-button");
+    let nextBtn = document.getElementById("next-button");
+
+    scrollContainer.addEventListener("wheel", (evt) => {
+      scrollContainer.style.scrollBehavior = "auto";
+      evt.preventDefault();
+      scrollContainer.scrollLeft += evt.deltaY;
+    });
+    nextBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft += 300;
+    });
+    prevBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft -= 300;
+    });
+  </script>
+</body>
+</html>

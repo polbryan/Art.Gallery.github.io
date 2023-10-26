@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leonardo Da Vinci</title>
+  <link rel="stylesheet" href="image-gallery.css">
+  <script src="https://kit.fontawesome.com/393db74bed.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div><a href="">Title</a></div>
+      <div><a href="image-gallery.html">Home</a></div>
+      <div><a href="">Artists</a></div>
+      <div><a href="">Gallery</a></div>
+    </div>
+    <div class="main-leonardo">
+      <img src="leonardo.jpg" alt="" class="profile">
+      <div class="info">
+        <div>Full Name</div>
+        <div>Leonardo di ser Piero da Vinci</div>
+        <div>Born</div>
+        <div>April 15, 1452 (Vinci, Italy)</div>
+        <div>Died</div>
+        <div>May 2, 1519 (Amboise, France)</div>
+        <div>Notable Artwork</div>
+        <div>Mona Lisa, Vitruvian Man
+        </div>
+        <div>Movement</div>
+        <div>Italian Renaissance</div>
+      </div>
+    </div>
+    <div class="biography">
+      <p><span>Leonardo di ser Piero da Vinci </span> (15 April 1452 - 2 May 1519) was an Italian polymath of the High Renaissance who was active as a painter, draughtsman, engineer, scientist, theorist, sculptor, and architect. While his fame initially rested on his achievements as a painter, he also became known for his notebooks, in which he made drawings and notes on a variety of subjects, including anatomy, astronomy, botany, cartography, painting, and paleontology. Leonardo is widely regarded to have been a genius who epitomized the Renaissance humanist ideal, and his collective works comprise a contribution to later generations of artists matched only by that of his younger contemporary <a href="michelangelo.html" target="_blank">Michelangelo.</a></p>
+    </div>
+    <div class="image-container">
+      <h1>Famous Paintings</h1>
+      <div class="gallery-wrap">
+        <button id="prev-button"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="gallery">
+          <div>
+            <span><img src="paintings/Leonardo-Mona-Lisa.jpg" alt="">
+              <div class="art-name">
+                <h2>Mona Lisa</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Leonardo_self-portrait.jpg" alt="">
+              <div class="art-name">
+                <h2>Self Portrait</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Leonardo-Lady_with_an_Ermine.jpg" alt="">
+              <div class="art-name">
+                <h2>Lady with an Ermine</h2>
+              </div>
+            </span>
+          </div>
+          <div>
+            <span><img src="paintings/Leonardo-da-Vinci-Salvator-Mundi.jpg" alt="">
+              <div class="art-name">
+                <h2>Salvator Mundi</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Leonardo-Vitruvian-Man.jpg" alt="">
+              <div class="art-name">
+                <h2>Vitruvian Man</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Leonardo_Head_of_a_Woman.jpg" alt="">
+              <div class="art-name">
+                <h2>Head of a Woman</h2>
+              </div>
+            </span>
+          </div>
+          <div>
+            <span><img src="paintings/Léonard_de_Vinci,_sainte_Anne,_Louvre.jpg" alt="">
+              <div class="art-name">
+                <h2>The Virgin and Child with Saint Anne</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Leonardo_Last_supper.jpg" alt="" class="landscape">
+              <div class="art-name">
+                <h2>Last Supper</h2>
+              </div>
+            </span>
+          </div>
+  
+        </div>
+
+        <button id="next-button"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+    </div>
+    <footer class="footer">
+      <h2>Contacts:</h2>
+      <p><a href="">polbryanparadero@gmail.com</a></p>
+      <p><a href="">09691306593</a></p>
+      <p class="portfolio">Visit my Portfolio website <a href="">Here.</a></p>
+      <p class="copyright">&#169; Art Gallery. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    let scrollContainer = document.querySelector(".gallery");
+    let prevBtn = document.getElementById("prev-button");
+    let nextBtn = document.getElementById("next-button");
+
+    scrollContainer.addEventListener("wheel", (evt) => {
+      scrollContainer.style.scrollBehavior = "auto";
+      evt.preventDefault();
+      scrollContainer.scrollLeft += evt.deltaY;
+    });
+    nextBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft += 300;
+    });
+    prevBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft -= 300;
+    });
+  </script>
+</body>
+</html>

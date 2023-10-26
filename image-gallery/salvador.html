@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salvador Dali</title>
+  <link rel="stylesheet" href="image-gallery.css">
+  <script src="https://kit.fontawesome.com/393db74bed.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div><a href="">Title</a></div>
+      <div><a href="image-gallery.html">Home</a></div>
+      <div><a href="">Artists</a></div>
+      <div><a href="">Gallery</a></div>
+    </div>
+    <div class="main-salvador">
+      <img src="salvador.jpg" alt="" class="profile">
+      <div class="info">
+        <div>Full Name</div>
+        <div>Salvador Domingo Felipe Jacinto Dalí i Domènech, Marquess of Dalí of Púbol</div>
+        <div>Born</div>
+        <div>May 11, 1904 (Spain)</div>
+        <div>Died</div>
+        <div>January 23, 1989 (Spain)</div>
+        <div>Notable Artwork</div>
+        <div>The Persistence of Memory</div>
+        <div>Movement</div>
+        <div>Surrealism</div>
+      </div>
+    </div>
+    <div class="biography">
+      <p><span>Salvador Domingo Felipe Jacinto Dalí i Domènech, Marquess of Dalí of Púbol </span> (11 May 1904 - 23 January 1989), known as Salvador Dalí (/'da: li, da:'li:/ DAH-lee, dah-LEE, Catalan: [səlβə'ðo ðə'li], Spanish: [salβa'ðoɾ ða'li]), was a Spanish surrealist artist renowned for his technical skill, precise draftsmanship, and the striking and bizarre images in his work.</p>
+      <p>Born in Figueres, Catalonia, Spain, Dalí received his formal education in fine arts in Madrid. Influenced by Impressionism and the Renaissance masters from a young age he became increasingly attracted to Cubism and avant-garde movements. He moved closer to Surrealism in the late 1920s and joined the Surrealist group in 1929, soon becoming one of its leading exponents. His best-known work, The Persistence of Memory, was completed in August 1931, and is one of the most famous Surrealist paintings. Dalí lived in France throughout the Spanish Civil War (1936 to 1939) before leaving for the United States in 1940 where he achieved commercial success. He returned to Spain in 1948 where he announced his return to the Catholic faith and developed his "nuclear mysticism" style, based on his interest in classicism, mysticism, and recent scientific developments.</p>
+    </div>
+    <div class="image-container">
+      <h1>Famous Paintings</h1>
+      <div class="gallery-wrap">
+        <button id="prev-button"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="gallery">
+          <div>
+            <span class="landscape"><img src="paintings/Salvador_clock.jpg" alt="">
+              <div class="art-name">
+                <h2>The Persistence of Memory</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Salvador-the-burning-giraffe.png" alt="">
+              <div class="art-name">
+                <h2>The Burning Giraffe</h2>
+              </div>
+            </span>
+          </div>
+          <div>
+            <span><img src="paintings/Salvador-the-temptaion-of-saint-.png" alt="">
+              <div class="art-name">
+                <h2>The Temptation of St. Anthony</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Salvador-christ-of-saint-john-of.png" alt="">
+              <div class="art-name">
+                <h2>Christ of Saint John of the Cross</h2>
+              </div>
+            </span>
+          </div>
+          <div>
+            <span><img src="paintings/Salvador-the-elephants.png" alt="">
+              <div class="art-name">
+                <h2>The Elephants</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Salvador-swans-reflecting-elepha.png" alt="">
+              <div class="art-name">
+                <h2>Swans Reflecting Elephants</h2>
+              </div>
+            </span>
+          </div>
+          <div>
+            <span><img src="paintings/Salvador-metamorphosis-of-narcis.png" alt="">
+              <div class="art-name">
+                <h2>Metamosphosis of Narcissus</h2>
+              </div>
+            </span>
+          </div>
+  
+        </div>
+
+        <button id="next-button"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+    </div>
+    <footer class="footer">
+      <h2>Contacts:</h2>
+      <p><a href="">polbryanparadero@gmail.com</a></p>
+      <p><a href="">09691306593</a></p>
+      <p class="portfolio">Visit my Portfolio website <a href="">Here.</a></p>
+      <p class="copyright">&#169; Art Gallery. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    let scrollContainer = document.querySelector(".gallery");
+    let prevBtn = document.getElementById("prev-button");
+    let nextBtn = document.getElementById("next-button");
+
+    scrollContainer.addEventListener("wheel", (evt) => {
+      scrollContainer.style.scrollBehavior = "auto";
+      evt.preventDefault();
+      scrollContainer.scrollLeft += evt.deltaY;
+    });
+    nextBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft += 300;
+    });
+    prevBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft -= 300;
+    });
+  </script>
+</body>
+</html>

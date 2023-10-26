@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michelangelo</title>
+  <link rel="stylesheet" href="image-gallery.css">
+  <script src="https://kit.fontawesome.com/393db74bed.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div><a href="">Title</a></div>
+      <div><a href="image-gallery.html">Home</a></div>
+      <div><a href="">Artists</a></div>
+      <div><a href="">Gallery</a></div>
+    </div>
+    <div class="main-michelangelo">
+      <img src="michelangelo.jpg" alt="" class="profile">
+      <div class="info">
+        <div>Full Name</div>
+        <div>Michelangelo di Lodovico Buonarroti Simoni</div>
+        <div>Born</div>
+        <div>March 6, 1475 (Caprese, Italy)</div>
+        <div>Died</div>
+        <div>	
+          February 18, 1564 (Rome, Italy)</div>
+        <div>Notable Artwork</div>
+        <div>Sistine Chapel ceiling, David</div>
+        <div>Movement</div>
+        <div>Italian Renaissance</div>
+      </div>
+    </div>
+    <div class="biography">
+      <p><span>Michelangelo di Lodovico Buonarroti Simoni </span> (6 March 1475 - 18 February 1564), known as Michelangelo, was an Italian sculptor, painter, architect, and poet of the High Renaissance. Born in the Republic of Florence, his work was inspired by models from classical antiquity and had a lasting influence on Western art. Michelangelo's creative abilities and mastery in a range of artistic arenas define him as an archetypal Renaissance man, along with his rival and elder contemporary, <a href="leonardo.html" target="_blank">Leonardo da Vinci.</a> Given the sheer volume of surviving correspondence, sketches, and reminiscences, Michelangelo is one of the best-documented artists of the 16th century. He was lauded by contemporary biographers as the most accomplished artist of his era.</p>
+    </div>
+    <div class="image-container">
+      <h1>Famous Paintings</h1>
+      <div class="gallery-wrap">
+        <button id="prev-button"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="gallery">
+          <div>
+            <span class="landscape"><img src="paintings/Michelangelo_-_Creation_of_Adam.jpg" alt="">
+              <div class="art-name">
+                <h2>Creation of Adam</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Michelangelo-conversion-of-saul..jpg" alt="">
+              <div class="art-name">
+                <h2>The Conversion of Saul</h2>
+              </div>
+            </span>
+          </div>
+          <div>
+            <span><img src="paintings/Michelangelo-Death-Of-Da-Vinci.jpg" alt="">
+              <div class="art-name">
+                <h2>The Death of Leonardo Da Vinci</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Michelangelo-the-crucifixion-of-.jpg" alt="">
+              <div class="art-name">
+                <h2>The Crucifixion of St. Peter</h2>
+              </div>
+            </span>
+          </div>
+          <div>
+            <span><img src="paintings/Michelangelo-the-last-judgement.jpg" alt="">
+              <div class="art-name">
+                <h2>The Last Judgement</h2>
+              </div>
+            </span>
+          </div>
+  
+        </div>
+
+        <button id="next-button"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+    </div>
+    <footer class="footer">
+      <h2>Contacts:</h2>
+      <p><a href="">polbryanparadero@gmail.com</a></p>
+      <p><a href="">09691306593</a></p>
+      <p class="portfolio">Visit my Portfolio website <a href="">Here.</a></p>
+      <p class="copyright">&#169; Art Gallery. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    let scrollContainer = document.querySelector(".gallery");
+    let prevBtn = document.getElementById("prev-button");
+    let nextBtn = document.getElementById("next-button");
+
+    scrollContainer.addEventListener("wheel", (evt) => {
+      scrollContainer.style.scrollBehavior = "auto";
+      evt.preventDefault();
+      scrollContainer.scrollLeft += evt.deltaY;
+    });
+    nextBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft += 300;
+    });
+    prevBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft -= 300;
+    });
+  </script>
+</body>
+</html>

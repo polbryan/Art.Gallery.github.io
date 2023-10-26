@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan Luna</title>
+  <link rel="stylesheet" href="image-gallery.css">
+  <script src="https://kit.fontawesome.com/393db74bed.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div><a href="">Title</a></div>
+      <div><a href="image-gallery.html">Home</a></div>
+      <div><a href="">Artists</a></div>
+      <div><a href="">Gallery</a></div>
+    </div>
+    <div class="main-juan">
+      <img src="juan.png" alt="" class="profile">
+      <div class="info">
+        <div>Full Name</div>
+        <div>Juan Luna de San Pedro y Novicio Ancheta</div>
+        <div>Born</div>
+        <div>October 23, 1857 (Philippines)</div>
+        <div>Died</div>
+        <div>December 7, 1899 (Hong Kong)</div>
+        <div>Notable Artwork</div>
+        <div>Spoliarium, The Death of Cleopatra</div>
+        <div>Movement</div>
+        <div>Romanticism, Neoclassicism, Realism</div>
+      </div>
+    </div>
+    <div class="biography">
+      <p><span>Juan Luna de San Pedro y Novicio Ancheta </span> (October 23, 1857 - December 7, 1899) was a Filipino painter, sculptor and a political activist of the Philippine Revolution during the late 19th century. He became one of the first recognized Philippine artists.</p>
+
+      <p>His winning of the gold medal in the 1884 Madrid Exposition of Fine Arts, along with the silver win of fellow Filipino painter Félix Resurrección Hidalgo, prompted a celebration which was a significant highlight in the memoirs of members of the Propaganda Movement, with the fellow Ilustrados toasting the two painters' good health and the brotherhood between Spain and the Philippines.</p>
+        
+      <p>Well regarded for work done in the manner of European academies of his time, Luna painted literary and historical scenes, some with an underscore of political commentary. His allegorical works were inspired by classical balance, and often showed figures in theatrical poses.</p>
+    </div>
+    <div class="image-container">
+      <h1>Famous Paintings</h1>
+      <div class="gallery-wrap">
+        <button id="prev-button"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="gallery">
+          <div>
+            <span class="landscape"><img src="paintings/juan_spoliarium.jpg" alt="">
+              <div class="art-name">
+                <h2>Spoliarium</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Juan-una-mestiza.png" alt="">
+              <div class="art-name">
+                <h2>Una Mestiza</h2>
+              </div>
+            </span>
+          </div>
+          <div>
+            <span><img src="paintings/Juan-the-death-of-cleopatra.png" alt="">
+              <div class="art-name">
+                <h2>The Death of Cleopatra</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Juan-la-burla.png" alt="">
+              <div class="art-name">
+                <h2>La Burla</h2>
+              </div>
+            </span>
+          </div>
+          <div>
+            <span><img src="paintings/Juan-las-damas-romanas.png" alt="">
+              <div class="art-name">
+                <h2>Las Damas Romanas</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Juan-the-parisian-life.png" alt="">
+              <div class="art-name">
+                <h2>The Parisian Life</h2>
+              </div>
+            </span>
+          </div>
+  
+        </div>
+
+        <button id="next-button"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+    </div>
+    <footer class="footer">
+      <h2>Contacts:</h2>
+      <p><a href="">polbryanparadero@gmail.com</a></p>
+      <p><a href="">09691306593</a></p>
+      <p class="portfolio">Visit my Portfolio website <a href="">Here.</a></p>
+      <p class="copyright">&#169; Art Gallery. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    let scrollContainer = document.querySelector(".gallery");
+    let prevBtn = document.getElementById("prev-button");
+    let nextBtn = document.getElementById("next-button");
+
+    scrollContainer.addEventListener("wheel", (evt) => {
+      scrollContainer.style.scrollBehavior = "auto";
+      evt.preventDefault();
+      scrollContainer.scrollLeft += evt.deltaY;
+    });
+    nextBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft += 300;
+    });
+    prevBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft -= 300;
+    });
+  </script>
+</body>
+</html>

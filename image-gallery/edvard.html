@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edvard Munch</title>
+  <link rel="stylesheet" href="image-gallery.css">
+  <script src="https://kit.fontawesome.com/393db74bed.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div><a href="">Title</a></div>
+      <div><a href="image-gallery.html">Home</a></div>
+      <div><a href="">Artists</a></div>
+      <div><a href="">Gallery</a></div>
+    </div>
+    <div class="main-edvard">
+      <img src="edvard.jpg" alt="" class="profile">
+      <div class="info">
+        <div>Full Name</div>
+        <div>Edvard Munch</div>
+        <div>Born</div>
+        <div>December 12, 1863 (Norway)</div>
+        <div>Died</div>
+        <div>January 23, 1944 (near Oslo, Norway)</div>
+        <div>Notable Artwork</div>
+        <div>Death in the Sick Room, The Scream</div>
+        <div>Movement</div>
+        <div>Expressionism</div>
+      </div>
+    </div>
+    <div class="biography">
+      <p><span>Edvard Munch </span> (12 December 1863 - 23 January 1944) was a Norwegian painter. His 1893 work, The Scream, has become one of Western art's most acclaimed images.</p>
+      <p>His childhood was overshadowed by illness, bereavement and the dread of inheriting a mental condition that ran in the family. Studying at the Royal School of Art and Design in Kristiania (today's Oslo), Munch began to live a bohemian life under the influence of the nihilist Hans Jæger, who urged him to paint his own emotional and psychological state ('soul painting'); from this emerged his distinctive style.</p>
+    </div>
+    <div class="image-container">
+      <h1>Famous Paintings</h1>
+      <div class="gallery-wrap">
+        <button id="prev-button"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="gallery">
+          <div>
+            <span class="landscape"><img src="paintings/Edvard-death-in-the-sick-room.png" alt="">
+              <div class="art-name">
+                <h2>Death in the Sick Room</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Edvard_Scream.jpg" alt="">
+              <div class="art-name">
+                <h2>The Scream</h2>
+              </div>
+            </span>
+          </div>
+          <div>
+            <span><img src="paintings/Edvard-the-dance-of-life.jpg" alt="">
+              <div class="art-name">
+                <h2>The Dance of Life</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Edvard-self-portrait-with-burnin.jpg" alt="">
+              <div class="art-name">
+                <h2>Self Portrait with Burning Cigarette</h2>
+              </div>
+            </span>
+          </div>
+          <div>
+            <span><img src="paintings/Edvard_Munch_-_Melancholy.jpg" alt="">
+              <div class="art-name">
+                <h2>Melancholy</h2>
+              </div>
+            </span>
+            <span><img src="paintings/Edvard-anxiety.png" alt="">
+              <div class="art-name">
+                <h2>Anxiety</h2>
+              </div>
+            </span>
+          </div>
+          <div>
+            <span><img src="paintings/Edvard-love-and-pain.jpg" alt="">
+              <div class="art-name">
+                <h2>Love and Pain</h2>
+              </div>
+            </span>
+          </div>
+  
+        </div>
+
+        <button id="next-button"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+    </div>
+    <footer class="footer">
+      <h2>Contacts:</h2>
+      <p><a href="">polbryanparadero@gmail.com</a></p>
+      <p><a href="">09691306593</a></p>
+      <p class="portfolio">Visit my Portfolio website <a href="">Here.</a></p>
+      <p class="copyright">&#169; Art Gallery. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    let scrollContainer = document.querySelector(".gallery");
+    let prevBtn = document.getElementById("prev-button");
+    let nextBtn = document.getElementById("next-button");
+
+    scrollContainer.addEventListener("wheel", (evt) => {
+      scrollContainer.style.scrollBehavior = "auto";
+      evt.preventDefault();
+      scrollContainer.scrollLeft += evt.deltaY;
+    });
+    nextBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft += 300;
+    });
+    prevBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft -= 300;
+    });
+  </script>
+</body>
+</html>

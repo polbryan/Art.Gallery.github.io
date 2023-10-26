@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="image-gallery.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div><a href="">Artists Gallery</a></div>
+      <div><a href="image-gallery.html">Home</a></div>
+      <div><a href="">Artists</a></div>
+      <div><a href="">Gallery</a></div>
+    </div>
+    <main>
+      <div class="img-container">
+        <h2>Gallery</h2>
+        <div class="img-preview">
+          <img src="paintings/Edvard-anxiety.png" alt="" />
+        </div>
+        <div class="img-list">
+          <img src="paintings/Edvard-anxiety.png" alt="" />
+          <img src="paintings/Edvard-death-in-the-sick-room.png" alt="" />
+          <img src="paintings/Edvard-love-and-pain.jpg" alt="" />
+          <img src="paintings/Edvard-self-portrait-with-burnin.jpg" alt="" />
+          <img src="paintings/Edvard-the-dance-of-life.jpg" alt="" />
+          <img src="paintings/Edvard_Munch_-_Melancholy.jpg" alt="" />
+          <img src="paintings/Edvard_Scream.jpg" alt="" />
+          <img src="paintings/Juan-la-burla.png" alt="" />
+          <img src="paintings/Juan-las-damas-romanas.png" alt="" />
+          <img src="paintings/Juan-the-death-of-cleopatra.png" alt="" />
+          <img src="paintings/Juan-the-parisian-life.png" alt="" />
+          <img src="paintings/Juan-una-mestiza.png" alt="" />
+          <img src="paintings/juan_spoliarium.jpg" alt="" />
+          <img src="paintings/Leonardo-da-Vinci-Salvator-Mundi.jpg" alt="" />
+          <img src="paintings/Leonardo-Lady_with_an_Ermine.jpg" alt="" />
+          <img src="paintings/Leonardo-Mona-Lisa.jpg" alt="" />
+          <img src="paintings/Leonardo-Vitruvian-Man.jpg" alt="" />
+          <img src="paintings/Leonardo_Head_of_a_Woman.jpg" alt="" />
+          <img src="paintings/Leonardo_Last_supper.jpg" alt="" />
+          <img src="paintings/Leonardo_self-portrait.jpg" alt="" />
+          <img src="paintings/Léonard_de_Vinci,_sainte_Anne,_L.jpg" alt="" />
+          <img src="paintings/Michelangelo-conversion-of-saul..jpg" alt="" />
+          <img src="paintings/Michelangelo-Death-Of-Da-Vinci.jpg" alt="" />
+          <img src="paintings/Michelangelo-the-crucifixion-of-.jpg" alt="" />
+          <img src="paintings/Michelangelo-the-last-judgement.jpg" alt="" />
+          <img src="paintings/Michelangelo_-_Creation_of_Adam.jpg" alt="" />
+          <img src="paintings/Pablo-girl-before-a-mirror.png" alt="" />
+          <img src="paintings/Pablo-la-vie.png" alt="" />
+          <img src="paintings/Pablo-les-demioselles-d'avignon.png" alt="" />
+          <img src="paintings/Pablo-portrait-of-gertrude-stein.png" alt="" />
+          <img src="paintings/Pablo-self-portrait-1901.png" alt="" />
+          <img src="paintings/Pablo-the-old-guitarist.png" alt="" />
+          <img src="paintings/Pablo-the-weeping-woman.png" alt="" />
+          <img src="paintings/Pablo_guernica-cut.jpg" alt="" />
+          <img src="paintings/Raphael-sistine-madonna.jpg" alt="" />
+          <img src="paintings/Raphael-the-marriage-of-the-virgin.jpg" alt="" />
+          <img src="paintings/Raphael-the-triumph.png" alt="" />
+          <img src="paintings/Raphael-Transfiguration.jpg" alt="" />
+          <img src="paintings/Raphael_athens.jpg" alt="" />
+          <img src="paintings/Salvador-christ-of-saint-john-of.png" alt="" />
+          <img src="paintings/Salvador-metamorphosis-of-narcis.png" alt="" />
+          <img src="paintings/Salvador-swans-reflecting-elepha.png" alt="" />
+          <img src="paintings/Salvador-the-burning-giraffe.png" alt="" />
+          <img src="paintings/Salvador-the-elephants.png" alt="" />
+          <img src="paintings/Salvador-the-temptaion-of-saint-.png" alt="" />
+          <img src="paintings/Salvador_clock.jpg" alt="" />
+          <img src="paintings/Vincent-cafe-terrace-at-night.jpg" alt="" />
+          <img src="paintings/Vincent-oslo-self-portrait.jpg" alt="" />
+          <img src="paintings/Vincent-still-life-with-irises.jpg" alt="" />
+          <img src="paintings/Vincent-sunflowers.jpg" alt="" />
+          <img src="paintings/Vincent-the-night-cafe.jpg" alt="" />
+          <img src="paintings/Vincent-the-starry-night-over-th.jpg" alt="" />
+          <img src="paintings/Vincent_starry_night2.jpg" alt="" />
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    const imgList = document.querySelector('.img-list');
+    const imgPrev = document.querySelector('.img-preview');
+
+    imgList.addEventListener('click', (e) => {
+      if (e.target.tagName === 'IMG') {
+        const imgURL = e.target.getAttribute('src');
+        imgPrev.innerHTML = `<img src="${imgURL}" style="outline: 2px solid white">`;
+      }
+    });
+  </script>
+</html>
